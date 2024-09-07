@@ -13,9 +13,9 @@ export const TodoList = ({ tasks, updatedTask, toggleTask, deleteTask }) => {
     return tasks.filter((task) => {
       return (
         !task.deleted &&
-        ((filter == "active" && !task.done) ||
-          (filter == "completed" && task.done) ||
-          filter == "all")
+        ((filter === "active" && !task.done) ||
+          (filter === "completed" && task.done) ||
+          filter === "all")
       );
     });
   };
