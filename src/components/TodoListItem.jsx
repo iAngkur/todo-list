@@ -78,9 +78,11 @@ export const TodoListItem = ({
         ) : (
           <ListItemText onClick={handleOnClick}>{newDescription} </ListItemText>
         )}
-        <IconButton onClick={handleOnCancel}>
-          <CloseIcon />
-        </IconButton>
+        {checked && (
+          <IconButton onClick={handleOnCancel}>
+            <CloseIcon />
+          </IconButton>
+        )}
       </ListItem>
     </Box>
   );

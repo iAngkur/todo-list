@@ -10,12 +10,12 @@ export const TodoListContainer = () => {
   useEffect(() => {
     if (firstLoad) {
       setFirstLoad(false);
-      const localStorageTasks = JSON.parse(localStorage.getItem("tasks"));
+      const localStorageTasks = JSON.parse(localStorage.getItem("tasks")) || [];
       if (localStorageTasks) {
         setTasks(localStorageTasks);
       }
     }
-  }, []);
+  }, [firstLoad, setFirstLoad]);
 
   // update the localStorage
   // on first load - we need to pull from the localStorage and render
