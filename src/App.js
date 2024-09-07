@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container>
+      <Grid size={{ xs: 12 }} >
+        <Box sx={{ padding: '16px' }}>
+          <Typography
+            align='center'
+            variant='h4'
+          >
+            Todo List
+          </Typography>
+        </Box>
+      </Grid>
+      <Grid
+        size={{ xs: 10, md: 8, lg: 6 }} offset={{ xs: 1, md: 2, lg: 3 }}
+      >
+        <div style={{ border: '1px solid black' }}>Todo List Container</div>
+      </Grid>
+    </Grid >
   );
 }
-
-export default App;
